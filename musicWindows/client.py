@@ -98,9 +98,9 @@ def allPlayList():
     global songList
     #If the list is not void
     if songList:
+        print(songList)
         for song in songList:
-            songList.pop(0)
-            # print(songAux)
+            # songList.pop(0)
             print("Playing song:", song)
             Play(song)
             # Wait for the music to play before exiting 
@@ -136,7 +136,6 @@ def userControler():
         elif opt == 't':
             t = threading.Thread(target=allPlayList)
             t.start()
-            # t.join()
 
 
 if __name__ == "__main__":
